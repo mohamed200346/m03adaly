@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>حساب معدل الجامعة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div classs="sidebar">
+    <h2>سجل النتائج</h2>
+    <ul clas="saved-results" id="savedResults"></ul>
+</div>
+
+<div>
+    <div class="title">مضاوي محمد x edition</div>
+
+    <h2>حساب معدل الجامعة</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>رقم المقياس</th>
+                <th>معامل</th>
+                <th>نوع التقييم</th>
+                <th>أعمال تطبيقية (40%)</th>
+                <th>امتحان (60%)</th>
+                <th>معدل المقياس</th>
+            </tr>
+        </thead>
+        <tbody id="gradesTable">
+        </tbody>
+    </table>
+    <button onclick="addRow()">إضافة مقياس</button>
+    <button onclick="calculateAverage()">حساب المعدل</button>
+
+    <div class="result" id="result"></div>
+
+    <div>
+        <label for="studentName">اسم صاحب المعدل:</label>
+        <input type="text" id="studentName" placeholder="أدخل الاسم">
+        <button onclick="saveResult()">حفظ النتيجة</button>
+    </div>
+
+    <div class="footer">
+        <div class="footer-text">صلي على النبي محمد وٓ وحد الله</div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
